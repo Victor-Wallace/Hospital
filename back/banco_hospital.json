@@ -1,0 +1,202 @@
+{
+  "usuarios": [
+    {
+      "username": "admin",
+      "password": "123456"
+    },
+    {
+      "username": "user1",
+      "password": "senha123"
+    }
+  ],
+  "maqueiros": [
+    {
+      "id": 1,
+      "nome": "Carlos Silva",
+      "status": "Disponível",
+      "historicoSolicitacoes": [
+        {
+          "solicitacaoId": 101,
+          "paciente": "João Pereira",
+          "origem": "Quarto 203",
+          "destino": "Sala de Raios-X",
+          "status": "Chegou ao destino",
+          "data": "2024-12-10 14:30",
+          "prioridade": "Média"
+        },
+        {
+          "solicitacaoId": 102,
+          "paciente": "Maria Clara",
+          "origem": "Quarto 105",
+          "destino": "Sala de Cirurgia",
+          "status": "Chegou ao destino",
+          "data": "2024-12-10 15:00",
+          "prioridade": "Alta"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Ana Oliveira",
+      "status": "Ocupado",
+      "historicoSolicitacoes": [
+        {
+          "solicitacaoId": 103,
+          "paciente": "Pedro Alves",
+          "origem": "UTI",
+          "destino": "Tomografia",
+          "status": "Em transporte",
+          "data": "2024-12-11 08:30",
+          "prioridade": "Alta"
+        },
+        {
+          "solicitacaoId": 104,
+          "paciente": "Luciana Gomes",
+          "origem": "Quarto 210",
+          "destino": "Exames Laboratoriais",
+          "status": "Chegou ao destino",
+          "data": "2024-12-11 09:15",
+          "prioridade": "Baixa"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "João Carlos",
+      "status": "Disponível",
+      "historicoSolicitacoes": [
+        {
+          "solicitacaoId": 105,
+          "paciente": "Paula Mendes",
+          "origem": "Quarto 108",
+          "destino": "Sala de Exames Cardiovasculares",
+          "status": "Chegou ao destino",
+          "data": "2024-12-11 10:00",
+          "prioridade": "Média"
+        }
+      ]
+    }
+  ],
+  "solicitacoesTransporte": [
+    {
+      "id": 201,
+      "paciente": {
+        "id": 1001,
+        "nome": "Ana Souza",
+        "localizacaoAtual": "UTI",
+        "status": "Aguardando transporte"
+      },
+      "origem": "UTI",
+      "destino": "Tomografia",
+      "prioridade": "Alta",
+      "dataSolicitacao": "2024-12-11 09:00",
+      "maqueiroId": null,
+      "statusSolicitacao": "Pendente"
+    },
+    {
+      "id": 202,
+      "paciente": {
+        "id": 1002,
+        "nome": "Roberto Lima",
+        "localizacaoAtual": "Quarto 304",
+        "status": "Aguardando transporte"
+      },
+      "origem": "Quarto 304",
+      "destino": "Exames de Sangue",
+      "prioridade": "Média",
+      "dataSolicitacao": "2024-12-11 09:30",
+      "maqueiroId": null,
+      "statusSolicitacao": "Pendente"
+    },
+    {
+      "id": 203,
+      "paciente": {
+        "id": 1003,
+        "nome": "Cláudia Oliveira",
+        "localizacaoAtual": "Sala de Emergência",
+        "status": "Aguardando transporte"
+      },
+      "origem": "Sala de Emergência",
+      "destino": "Sala de Cirurgia",
+      "prioridade": "Alta",
+      "dataSolicitacao": "2024-12-11 09:45",
+      "maqueiroId": null,
+      "statusSolicitacao": "Pendente"
+    },
+    {
+      "id": 204,
+      "paciente": {
+        "id": 1004,
+        "nome": "Fernanda Silva",
+        "localizacaoAtual": "Quarto 120",
+        "status": "Aguardando transporte"
+      },
+      "origem": "Quarto 120",
+      "destino": "Ressonância Magnética",
+      "prioridade": "Baixa",
+      "dataSolicitacao": "2024-12-11 10:15",
+      "maqueiroId": null,
+      "statusSolicitacao": "Pendente"
+    }
+  ],
+  "rastreioPacientes": [
+    {
+      "pacienteId": 1001,
+      "nome": "Ana Souza",
+      "localizacaoAtual": "UTI",
+      "status": "Aguardando transporte"
+    },
+    {
+      "pacienteId": 1002,
+      "nome": "Roberto Lima",
+      "localizacaoAtual": "Quarto 304",
+      "status": "Aguardando transporte"
+    },
+    {
+      "pacienteId": 1003,
+      "nome": "Cláudia Oliveira",
+      "localizacaoAtual": "Sala de Emergência",
+      "status": "Aguardando transporte"
+    },
+    {
+      "pacienteId": 1004,
+      "nome": "Fernanda Silva",
+      "localizacaoAtual": "Quarto 120",
+      "status": "Aguardando transporte"
+    }
+  ],
+  "incidentes": [
+    {
+      "id": 301,
+      "solicitacaoId": 201,
+      "paciente": "Ana Souza",
+      "data": "2024-12-11 09:30",
+      "descricao": "Elevador indisponível, atraso no transporte.",
+      "status": "Resolvido"
+    },
+    {
+      "id": 302,
+      "solicitacaoId": 202,
+      "paciente": "Roberto Lima",
+      "data": "2024-12-11 10:00",
+      "descricao": "Paciente estava desorientado durante o transporte.",
+      "status": "Em análise"
+    },
+    {
+      "id": 303,
+      "solicitacaoId": 203,
+      "paciente": "Cláudia Oliveira",
+      "data": "2024-12-11 10:30",
+      "descricao": "Problema com a maca durante o transporte.",
+      "status": "Resolvido"
+    },
+    {
+      "id": 304,
+      "solicitacaoId": 204,
+      "paciente": "Fernanda Silva",
+      "data": "2024-12-11 10:45",
+      "descricao": "Demora na liberação da sala de exames.",
+      "status": "Pendente"
+    }
+  ]
+}
